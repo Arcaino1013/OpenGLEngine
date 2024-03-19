@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>G:\Github\OpenGLEngine\OpenGLEngine\x64\Debug\OpenGLEngine.exe</FullPath>
+      <FullPath>G:\Github\OpenGLEngine\VulkanEngine\x64\Debug\OpenGLEngine.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

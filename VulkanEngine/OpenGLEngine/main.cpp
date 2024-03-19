@@ -1,62 +1,35 @@
-#include <glad/glad.h>
+#define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
+
+#define GLM_FORCE_RADIANS
+#define GLM_FORCE_DEPTH_ZERO_TO_ONE
+#include <glm/vec4.hpp>
+#include <glm/mat4x4.hpp>
+
 #include <iostream>
 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height);
-void processInput(GLFWwindow* window);
+int main() {
+    glfwInit();
 
-int main()
-{
-	if (!glfwInit())
-		return -1;
+    glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+    GLFWwindow* window = glfwCreateWindow(800, 600, "Vulkan window", nullptr, nullptr);
 
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    uint32_t extensionCount = 0;
+    vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount, nullptr);
 
-	GLFWwindow* window = glfwCreateWindow(640, 480, "Hello, World!", NULL, NULL);
-	if (!window)
-	{
-		std::cout << "Failed to create the window!" << std::endl;
-		glfwTerminate();
-		return -1;
-	}
+    std::cout << extensionCount << " extensions supported\n";
 
-	glfwMakeContextCurrent(window);
-	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    glm::mat4 matrix;
+    glm::vec4 vec;
+    auto test = matrix * vec;
 
-	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-	{
-		std::cout << "Failed to load opengl funtion pointers!" << std::endl;
-		glfwTerminate();
-		return -1;
-	}
+    while (!glfwWindowShouldClose(window)) {
+        glfwPollEvents();
+    }
 
-	while (!glfwWindowShouldClose(window))
-	{
-		processInput(window);
+    glfwDestroyWindow(window);
 
-		glClearColor(0.6f, 0.0f, 0.0f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT);
+    glfwTerminate();
 
-		glfwSwapBuffers(window);
-
-		glfwPollEvents();
-	}
-
-	glfwTerminate();
-	return 0;
-}
-
-void processInput(GLFWwindow* window)
-{
-	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-	{
-		glfwSetWindowShouldClose(window, true);
-	}
-}
-
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)
-{
-	glViewport(0, 0, width, height);
+    return 0;
 }
