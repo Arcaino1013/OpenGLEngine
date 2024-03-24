@@ -1,4 +1,5 @@
 ﻿  first_app.cpp
+  lve_pipeline.cpp
   main.cpp
   Generando código...
   OpenGLEngine.vcxproj -> G:\Github\OpenGLEngine\VulkanEngine\x64\Debug\OpenGLEngine.exe

@@ -1,48 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Archivos de origen">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{9fb180f6-7e62-4c76-b93c-81d4822f2a30}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Archivos de encabezado">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="Engine\Shaders">
+      <UniqueIdentifier>{e4515a0f-9a04-4e18-8e14-de6b89abbad9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Archivos de recursos">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Archivos de origen\Glad">
-      <UniqueIdentifier>{bed1deff-a4a4-4332-b017-ce918407d01d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de origen\Window">
-      <UniqueIdentifier>{c2b69cfd-6cb0-45b9-a526-1a0fff2577fc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de encabezado\Window">
-      <UniqueIdentifier>{6f33bf91-8cb7-47a8-84cc-d1c01cd353ef}</UniqueIdentifier>
+    <Filter Include="CompileScripts">
+      <UniqueIdentifier>{67f004f4-3952-4efb-8306-8bdf671f656c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Archivos de origen</Filter>
+    <ClCompile Include="first_app.cpp">
+      <Filter>Engine</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Arcaino\Desktop\glad.c">
-      <Filter>Archivos de origen\Glad</Filter>
+    <ClCompile Include="main.cpp">
+      <Filter>Engine</Filter>
     </ClCompile>
     <ClCompile Include="lve_window.cpp">
-      <Filter>Archivos de origen\Window</Filter>
+      <Filter>Engine</Filter>
     </ClCompile>
-    <ClCompile Include="first_app.cpp">
-      <Filter>Archivos de origen\Window</Filter>
-    </ClCompile>
+    <ClCompile Include="lve_pipeline.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lve_window.hpp">
-      <Filter>Archivos de encabezado\Window</Filter>
+      <Filter>Engine</Filter>
     </ClInclude>
     <ClInclude Include="first_app.hpp">
-      <Filter>Archivos de encabezado\Window</Filter>
+      <Filter>Engine</Filter>
     </ClInclude>
+    <ClInclude Include="lve_pipeline.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="simple_shader.vert">
+      <Filter>Engine\Shaders</Filter>
+    </None>
+    <None Include="simple_shader.frag">
+      <Filter>Engine\Shaders</Filter>
+    </None>
+    <None Include="compile.sh">
+      <Filter>CompileScripts</Filter>
+    </None>
   </ItemGroup>
 </Project>
