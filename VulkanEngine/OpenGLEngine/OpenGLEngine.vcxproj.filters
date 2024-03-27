@@ -22,6 +22,7 @@
       <Filter>Engine</Filter>
     </ClCompile>
     <ClCompile Include="lve_pipeline.cpp" />
+    <ClCompile Include="my_engine_device.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lve_window.hpp">
@@ -31,6 +32,7 @@
       <Filter>Engine</Filter>
     </ClInclude>
     <ClInclude Include="lve_pipeline.hpp" />
+    <ClInclude Include="my_engine_device.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="simple_shader.vert">
