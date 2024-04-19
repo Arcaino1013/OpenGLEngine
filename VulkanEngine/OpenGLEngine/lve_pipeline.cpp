@@ -57,4 +57,11 @@ namespace lve{
 			throw std::runtime_error("Failed to create a shader module");
 		}
 	}
+
+	PipelineConfigInfo LvePipeline::defaultPipelineConfigInfo(uint32_t width, uint32_t height) 
+	{
+		PipelineConfigInfo configInfo{};
+
+		return configInfo;
+	}
 }

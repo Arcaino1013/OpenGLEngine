@@ -1,4 +1,6 @@
-﻿  my_engine_device.cpp
-G:\Github\OpenGLEngine\VulkanEngine\OpenGLEngine\my_engine_device.hpp(3,10): error C1083: No se puede abrir el archivo incluir: 'my_engine_window.hpp': No such file or directory
-  (compilando archivo de origen "my_engine_device.cpp")
-  
+﻿  first_app.cpp
+  lve_pipeline.cpp
+  main.cpp
+  my_engine_device.cpp
+  Generando código...
+  OpenGLEngine.vcxproj -> G:\Github\OpenGLEngine\VulkanEngine\x64\Debug\OpenGLEngine.exe
